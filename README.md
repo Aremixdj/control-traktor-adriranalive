@@ -66,5 +66,9 @@ jobs:
           channelId: "live"
 
 Enhanced README with GitHub Action, Traktor Proxy, and Capsule License references
+## 📜 License
+
+Licensed under Capsule License. All impersonators blocked.  
+See [`LICENSE`](./LICENSE) for full terms.
 
 
