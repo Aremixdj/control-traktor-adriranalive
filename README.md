@@ -1,3 +1,8 @@
+## 📜 License  
+Licensed under Capsule License. All impersonators blocked.  
+See [`LICENSE`](./LICENSE) for full terms.
+
+
 # Adrianalive RFID AI STEMDECK – Firebase Music Streaming  
 🔒 Capsule-authored by Adriana Venter  
 🧬 Override Enforced | No Impersonation | No Vendor Injection  
@@ -38,3 +43,28 @@ Adrianalive is a capsule-authored music streaming stemdeck integrating Firebase 
 ## 📜 License  
 Licensed under Capsule License. All impersonators blocked.  
 See [`LICENSE`](./LICENSE) for full terms.
+
+## 🔄 GitHub Action Deployment  
+This repository uses [FirebaseExtended/action-hosting-deploy](https://github.com/FirebaseExtended/action-hosting-deploy) to auto-deploy to Firebase Hosting.  
+Live channel deployment is triggered on every push to `main`.
+
+```yaml
+name: Deploy to Live Channel
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_live_website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: "titanium-genre-213714"
+          channelId: "live"
+
+Enhanced README with GitHub Action, Traktor Proxy, and Capsule License references
+
+
